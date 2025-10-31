@@ -1,0 +1,186 @@
+:root {
+  --text: #f2e8ec;
+  --background: #0e0409;
+  --primary: #dfdfdf;
+  --secondary: #d6d6d6;
+  --accent: #fa0563;
+
+  /* color palette from accent */
+  --razzmatazz-50: #ffebf4;
+  --razzmatazz-100: #ffc1da;
+  --razzmatazz-200: #ff9dc4;
+  --razzmatazz-300: #ff79ad;
+  --razzmatazz-400: #ff5795;
+  --razzmatazz-500: #fa397c;
+  --razzmatazz-600: #d82e68;
+  --razzmatazz-700: #ac2655;
+  --razzmatazz-800: #801d40;
+  --razzmatazz-900: #55132b;
+  --razzmatazz-950: #2e0c19;
+
+  /* color palette from background */
+  --diesel-50: #f8f2f5;
+  --diesel-100: #dcd6d9;
+  --diesel-200: #c5bec1;
+  --diesel-300: #ada6aa;
+  --diesel-400: #958d91;
+  --diesel-500: #7c7277;
+  --diesel-600: #61585d;
+  --diesel-700: #473d41;
+  --diesel-800: #2c2327;
+  --diesel-900: #130b0e;
+  --diesel-950: #020002;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+}
+
+.navigation {
+  width: 550px;
+  height: 60px;
+  background-color: var(--diesel-50);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation ul {
+  position: relative;
+  display: flex;
+  width: calc(80px * 5);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation ul li {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80px;
+  text-align: center;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 100px;
+  font-size: 1.65rem;
+  color: var(--diesel-950);
+  transition: all 0.5s ease;
+}
+
+.navigation ul li a:hover .icon {
+  color: var(--accent);
+  text-shadow: 0 0 35px var(--razzmatazz-600);
+}
+
+.navigation ul li.active a .icon {
+  transform: translateY(-35px);
+  color: var(--accent);
+  transition-delay: 0.07s;
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  background-color: var(--accent);
+  color: var(--diesel-50);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(-3px);
+  transition-delay: 0.07s;
+}
+
+.indicator {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--diesel-50);
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  top: 0px;
+  left: -35px;
+  border-radius: 0 0 50% 0;
+  box-shadow: 20px 20px 0 var(--diesel-50);
+  z-index: -1;
+}
+
+.indicator::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  top: 0px;
+  right: -35px;
+  border-radius: 0 0 0 50%;
+  box-shadow: -20px 20px 0 var(--diesel-50);
+  z-index: -1;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(80px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(80px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(80px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(80px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(80px * 4));
+}
