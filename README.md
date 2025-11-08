@@ -18,7 +18,7 @@ Built purely with **HTML, CSS, and Vanilla JavaScript** — minimal yet expressi
 
 ## 🚀 Features
 
-### 🫧 Floating Bubble Indicator
+### 🔵 Floating Bubble Indicator
 
 - Circular **indicator** moves smoothly to follow the active item.
 - Uses **`::before` and `::after`** pseudo-elements to shape curved edges dynamically.
