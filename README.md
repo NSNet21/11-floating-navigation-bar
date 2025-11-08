@@ -1,4 +1,4 @@
-# 🌸 Floating Navigation Bar
+# 📱 Floating Navigation Bar
 
 > _A soft, floating navigation bar with smooth motion and minimalist bubble indicator._
 
@@ -137,6 +137,6 @@ The icon lifts upward, and a glowing pink text bubble (“Home”) gently appear
 
 ---
 
-**Designed & coded** by [**Nate**](https://github.com//NSNet21)
+**Designed & coded** by [_**Nate**_](https://github.com//NSNet21)
 
 💡 “Lightweight, minimal, and floating with purpose.”
